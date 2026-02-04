@@ -1,0 +1,10 @@
+node_modules/
+.env
+.DS_Store
+/cache
+/artifacts
+/typechain
+/typechain-types
+/coverage
+/coverage.json
+ignition/deployments/chain-31337
