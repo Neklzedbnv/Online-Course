@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skilled — Rewards</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="wrap">
+
+    <header class="topnav">
+      <div class="brand">Skilled <span class="dot"></span></div>
+      <nav class="navlinks">
+        <a href="marketplace.html">Courses</a>
+        <a href="creator.html">Create</a>
+        <a href="rewards.html">Rewards</a>
+      </nav>
+    </header>
+
+    <section class="walletStrip">
+      <div class="walletLeft">
+        <button class="allBtn" id="connectBtn" style="min-width:190px;">Connect MetaMask</button>
+        <div class="walletInfo">
+          Address: <b id="addr">-</b><br/>
+          Network: <b id="net">-</b>
+        </div>
+      </div>
+      <div class="walletInfo" style="text-align:right;">
+        ETH: <b id="ethBal">-</b><br/>
+        Token: <b id="tokBal">-</b>
+      </div>
+    </section>
+
+    <div class="split">
+      <section class="panel">
+        <h2 class="sectionTitle">Completion & Rewards</h2>
+
+        <div class="formGrid">
+          <div>
+            <label class="walletInfo">Course Tier ID (courseId)</label>
+            <input class="input" id="courseId" placeholder="e.g. 0" />
+          </div>
+          <div>
+            <label class="walletInfo">Student address (for completion)</label>
+            <input class="input" id="student" placeholder="0x..." />
+          </div>
+        </div>
+
+        <div class="actionsRow">
+          <button class="btn" id="completeBtn" style="min-width:240px;">Mark Completed (Creator)</button>
+          <button class="btn" id="claimBtn" style="min-width:240px;">Claim Reward (Student)</button>
+          <button class="btn" id="withdrawBtn" style="min-width:240px;">Creator Withdraw</button>
+        </div>
+
+        <pre id="out" style="margin-top:14px;"></pre>
+      </section>
+    </div>
+    <div id="regModal" class="modalOverlay" style="display:none;">
+  <div class="modalBox">
+    <div class="modalTitle">Choose Your Role</div>
+    <div class="modalText" id="regModalText">You must register once to use the platform.</div>
+
+    <div class="modalBtns">
+      <button class="btn" id="regStudentBtn">Register as Student</button>
+      <button class="btn" id="regCreatorBtn">Register as Creator</button>
+    </div>
+
+    <button class="modalClose" id="regCloseBtn">Close</button>
+  </div>
+</div>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+  <script src="./shared.js"></script>
+  <script src="./rewards.js"></script>
+</body>
+</html>
