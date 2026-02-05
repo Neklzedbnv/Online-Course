@@ -7,6 +7,9 @@ const PLATFORM_ABI = [
   "function registerCreator()",
   "function createCourse(string,string,uint8,uint256) returns (uint256)",
   "function enroll(uint256) payable",
+  "function markCompleted(uint256,address)",
+  "function claimReward(uint256)",
+  "function creatorWithdraw(uint256)",
   "function nextCourseId() view returns (uint256)",
   "function courses(uint256) view returns (uint256 id, address creator, string category, string title, uint8 tier, uint256 priceWei, uint256 totalPaid, uint256 withdrawn, bool exists)"
 ];
