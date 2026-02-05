@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Skilled — Rewards</title>
+  <title>Skilled — Create</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -25,6 +25,7 @@
           Address: <b id="addr">-</b><br/>
           Network: <b id="net">-</b>
         </div>
+
       </div>
       <div class="walletInfo" style="text-align:right;">
         ETH: <b id="ethBal">-</b><br/>
@@ -34,23 +35,47 @@
 
     <div class="split">
       <section class="panel">
-        <h2 class="sectionTitle">Completion & Rewards</h2>
+        <h2 class="sectionTitle">Create a Course</h2>
 
         <div class="formGrid">
           <div>
-            <label class="walletInfo">Course Tier ID (courseId)</label>
-            <input class="input" id="courseId" placeholder="e.g. 0" />
+            <label class="walletInfo">Category</label>
+            <select class="select" id="category">
+              <option value="AI Basics">AI Basics</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Blockchain">Blockchain</option>
+              <option value="Programming">Programming</option>
+              <option value="Mobile Dev">Mobile Dev</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="walletInfo">Course Title</label>
+            <input class="input" id="title" placeholder="e.g. Full-Stack Web Dev" />
+          </div>
+        </div>
+
+        <div class="formGrid" style="margin-top:12px;">
+          <div>
+            <label class="walletInfo">Basic price (ETH)</label>
+            <input class="input" id="basic" placeholder="0.01" />
           </div>
           <div>
-            <label class="walletInfo">Student address (for completion)</label>
-            <input class="input" id="student" placeholder="0x..." />
+            <label class="walletInfo">Premium price (ETH)</label>
+            <input class="input" id="premium" placeholder="0.02" />
+          </div>
+        </div>
+
+        <div class="formGrid" style="margin-top:12px;">
+          <div>
+            <label class="walletInfo">VIP price (ETH)</label>
+            <input class="input" id="vip" placeholder="0.03" />
           </div>
         </div>
 
         <div class="actionsRow">
-          <button class="btn" id="completeBtn" style="min-width:240px;">Mark Completed (Creator)</button>
-          <button class="btn" id="claimBtn" style="min-width:240px;">Claim Reward (Student)</button>
-          <button class="btn" id="withdrawBtn" style="min-width:240px;">Creator Withdraw</button>
+          <button class="btn" id="createBtn" style="min-width:240px;">Create 3 Tiers</button>
         </div>
 
         <pre id="out" style="margin-top:14px;"></pre>
@@ -69,11 +94,12 @@
     <button class="modalClose" id="regCloseBtn">Close</button>
   </div>
 </div>
-  </main>
 
+
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
   <script src="./shared.js"></script>
-  <script src="./rewards.js"></script>
+  <script src="./creator.js"></script>
 </body>
 </html>
